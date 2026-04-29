@@ -1,8 +1,0 @@
-[Script]
-# Netflix 双语字幕响应脚本
-http-response ^http.+nflxvideo\.com\/.+\.vtt(\$|\?m=\d+) script-path=https://github.com/chengkongyiban/Loon/raw/main/js/Dualsub.js, requires-body=1, max-size=0, timeout=30, tag=Dualsub-Netflix
-
-# Netflix 设置脚本
-http-request ^http.+(setting|general)\.nflxvideo\.com\/.+\?action=(g|s)et script-path=https://github.com/chengkongyiban/Loon/raw/main/js/Dualsub.js, requires-body=1, max-size=0, tag=Dualsub-setting-Netflix
-[MITM]
-hostname = *.nflxvideo.net
