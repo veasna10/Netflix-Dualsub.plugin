@@ -1,13 +1,12 @@
-#!name = Netflix 双语字幕
-#!desc = 为 Netflix 提供双语字幕功能。
-#!author = Neurogram-R
+#!name = Netflix DualSub 为你转换版
+#!desc = 将 Neurogram 的 Netflix 双语字幕 Snippet 转换为 Loon 插件格式。
+#!author = Neurogram & veasna10
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
-#!date = 2023-12-05
+#!date = 2024-03-20
 
 [Script]
-# 这里的脚本类型通常是 http-response，具体取决于原 snippet 的内容
-# 假设原 snippet 是对 Netflix 字幕接口的拦截
-http-response ^https?:\/\/.*\.nflxvideo\.net\/?.*\/msg\/.* script-path=https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/script/Netflix-Dualsub.js, requires-body=true, tag=Netflix双语字幕
+# 处理 Netflix 字幕并实现双语显示
+http-response ^https?:\/\/ios\.prod\.http1\.netflix\.com\/.*\/msg\/.* script-path=https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/script/Netflix-Dualsub.js, requires-body=true, tag=Netflix_Dualsub
 
 [MITM]
-hostname = *.nflxvideo.net
+hostname = ios.prod.http1.netflix.com
