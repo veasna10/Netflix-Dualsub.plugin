@@ -1,11 +1,9 @@
 #!name=Netflix Dualsub
 #!desc=Netflix 双语字幕增强（Loon版）
 
+[Script]
+http-response ^https:\/\/.+nflxvideo\.net\/\?o=\d+&v=\d+&e=.+ script-path=https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/Dualsub.js, requires-body=true
+http-request ^https:\/\/setting\.nflxvideo\.net\/\?action=(g|s)et script-path=https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/Dualsub.js, requires-body=true
+
 [MITM]
 hostname = *.nflxvideo.net, setting.nflxvideo.net
-
-[Script]
-
-http-response ^https:\/\/.+nflxvideo\.net\/\?o=\d+&v=\d+&e=.+ script-path=https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/Dualsub.js, requires-body=true
-
-http-request ^https:\/\/setting\.nflxvideo\.net\/\?action=(g|s)et script-path=https://raw.githubusercontent.com/Neurogram-R/Quantumult-X/main/Dualsub.js, requires-body=true
